@@ -1,65 +1,83 @@
 package com.fboot.entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.annotation.Transient;
+
+/**
+ *
+ * @author RipPer
+ */
+@Entity
+@Table(name = "consigne")
 public class Consigne {
-	
-	private int ID;
-	private String modeDeReponse;
-	private double bareme;
-	private double penalite;
-	private Question question;
-	
-	public Consigne(){
-		
-	}
-	
-	public Consigne(int iD, String modeDeReponse, double bareme,
-			double penalite, Question question) {
-		super();
-		ID = iD;
-		this.modeDeReponse = modeDeReponse;
-		this.bareme = bareme;
-		this.penalite = penalite;
-		this.question = question;
-	}
 
-	public int getID() {
-		return ID;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "consigne_id")
+    private int id;
+    @Column(name = "mode_reponse")
+    private String mode_reponse;
+    @Column(name = "bareme")
+    private String bareme;
+    @Column(name = "penalite")
+    private int penalite;
+    @OneToOne
+    @JoinColumn(name = "question_id")
+    private Question question;
 
-	public void setID(int iD) {
-		ID = iD;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getModeDeReponse() {
-		return modeDeReponse;
-	}
+    public String getMode_reponse() {
+        return mode_reponse;
+    }
 
-	public void setModeDeReponse(String modeDeReponse) {
-		this.modeDeReponse = modeDeReponse;
-	}
+    public String getBareme() {
+        return bareme;
+    }
 
-	public double getBareme() {
-		return bareme;
-	}
+    public int getPenalite() {
+        return penalite;
+    }
 
-	public void setBareme(double bareme) {
-		this.bareme = bareme;
-	}
+    public Question getQuestion() {
+        return question;
+    }
 
-	public double getPenalite() {
-		return penalite;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setPenalite(double penalite) {
-		this.penalite = penalite;
-	}
+    public void setMode_reponse(String mode_reponse) {
+        this.mode_reponse = mode_reponse;
+    }
 
-	public Question getQuestion() {
-		return question;
-	}
+    public void setBareme(String bareme) {
+        this.bareme = bareme;
+    }
 
-	public void setQuestion(Question question) {
-		this.question = question;
-	}
-	
+    public void setPenalite(int penalite) {
+        this.penalite = penalite;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
 }
