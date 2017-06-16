@@ -26,7 +26,6 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest sr, ServletResponse sr1, FilterChain fc) throws IOException, ServletException {
         try {
             if (((HttpServletRequest) sr).getSession().getAttribute("logged") != null) {
-                
             } else {
                 
             }
