@@ -31,7 +31,7 @@ public class AuthFilter implements Filter {
                     ((HttpServletResponse) sr1).sendRedirect("/");
                 }
             } else {
-                ((HttpServletResponse) sr1).sendRedirect("/projects/allProject");
+                
             }
             {
                 fc.doFilter(sr, sr1);
