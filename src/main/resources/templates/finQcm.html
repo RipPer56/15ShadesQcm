@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>15ShadesOfCode</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!--Import materialize.css-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+            body, html {
+                height: 100%;
+                line-height: 1.8;
+            }
+            /* Full height image header */
+            .bgimg-1 {
+                background-position: center;
+                background-size: cover;
+                background-image: url("background.jpg");
+                min-height: 100%;
+            }
+            .w3-bar .w3-button {
+                padding: 16px;
+            }
+            .sidebar-font{
+                color:white;
+                font-size:18px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card-2" id="myNavbar" >
+                <a href="#home" class="w3-bar-item w3-button w3-wide" style="padding: 3px 7px 11px 7px;">
+                    <img src="/img/logo2.2.png"/>
+                </a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small" >
+
+                    <div class="row" style="margin-top:13px;margin-left:-40px;">
+                        <a class="nav-link dropdown-toggle mr-lg-2" href="#" id="alertsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:20px;color:rgb(164,0,102);margin-right:10px;text-decoration: none;">
+                            <i class="fa fa-fw fa-bell"></i> <span class="hidden-lg-up"> </span>
+                        </a>
+
+
+                        <a onclick='myFunction("Demo1")' href="#" style="margin-right:30px;text-decoration: none;">
+                            <img src="/img/user.png" class="img-circle" style="margin-top:-10px;" alt="User" width="35" height="35"/>
+                            <span style="font-size:18px;color:rgb(164,0,102);margin-top:15px;">Zakariae</span>
+                        </a>
+                        <div id="Demo1" class="w3-dropdown-content w3-bar-block w3-animate-zoom" style="height:120px;margin-left:-40px;">
+                            <div class="w3-container " style="border:1px solid rgb(194,194,194);height:120px;padding-left:0px;">
+
+                                <img src="/img/user.png" class="img-rounded" style="margin-top:7px;margin-left:10px;" alt="User" width="60" height="60"/>
+                                <span style="font-size:17px;color:rgb(164,0,102);margin-top:5px;margin-left:0px">Hicham Benmehdi</span>
+                                <br/>
+                                <h5 style="font-size:14px;margin-top:-22px;margin-left:75px">hicham.benmehdi@gmail.com</h5>
+                                <hr style="margin-bottom:0px;"/>
+                                <div class="row" style="margin:3px 0px 0px 0px;padding-left:75px;">
+                                    <button class="w3-button w3-black " style="padding:4px 11px 4px 11px;">Logout</button>
+                                    <button class="w3-button  w3-teal " style="padding:4px 7px 4px 7px;">My Profil</button>
+                                </div>
+
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close —</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+            <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+            <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+        </nav>
+
+        <!-- Header with full-height image -->
+        <div clas="container" style="min-height:100vh;">
+            <div class="row" style="background:rgb(54,54,54);min-height:100vh;">
+                <div class="col-sm-2" style="background-color:rgb(54,54,54);margin-top:58px;padding-right:0px;">
+
+                    <div class="w3-dropdown-click w3-block">
+                        <a th:href="@{/etudiant/qcm/diagnostique}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                                Diagnostique  <span class="label label-success" /></button></a>
+
+                    </div>
+                    <div class="w3-dropdown-click w3-block">
+                        <a th:href="@{/etudiant/qcm/normatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                                Normatif  <span class="label label-success" /></button></a>
+
+                    </div>
+                    <div class="w3-dropdown-click w3-block">
+                        <a th:href="@{/etudiant/qcm/formatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                                Formatif  <span class="label label-success" /></button></a>
+
+                    </div>
+                    <div class="w3-dropdown-click w3-block">
+                        <a th:href="@{/etudiant/qcm/certificatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                                Certificatif  <span class="label label-success" /></button></a>
+
+                    </div>
+                </div>
+                <div class="col-sm-10" style="background-color:rgb(228,228,228);margin-top:58px;padding-bottom: 45px;min-height:100vh;">
+                    <h1 style="color:red;font-weight:bold;"> Fin Qcm</h1>
+                    <h2 style="color:yellow;"><span th:text="${session.score}"></span></h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/materialize.min.js"></script>
+        <!--
+        To use this code on your website, get a free API key from Google.
+        Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+        -->
+
+    </body>
+</html>
