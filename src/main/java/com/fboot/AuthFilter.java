@@ -26,10 +26,7 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest sr, ServletResponse sr1, FilterChain fc) throws IOException, ServletException {
         try {
             if (((HttpServletRequest) sr).getSession().getAttribute("logged") != null) {
-                if (((HttpServletRequest) sr).getSession().getAttribute("logged").equals("off")
-                        && !((HttpServletRequest) sr).getRequestURI().equals("/")) {
-                    ((HttpServletResponse) sr1).sendRedirect("/");
-                }
+                
             } else {
                 
             }
