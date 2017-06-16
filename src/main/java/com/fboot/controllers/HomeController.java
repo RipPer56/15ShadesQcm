@@ -4,8 +4,12 @@ import com.fboot.entities.Etudiant;
 import com.fboot.entities.Professeur;
 import com.fboot.repositories.EtudiantRepository;
 import com.fboot.repositories.ProfesseurRepository;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,7 +44,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public ModelAndView login(@RequestParam(value = "name") String name, @RequestParam(value = "password") String password) {
+    public ModelAndView login(HttpServletRequest request,@RequestParam(value = "name") String name, @RequestParam(value = "password") String password) {
         ModelAndView mav = new ModelAndView("welcome");
 
         List<Etudiant> etudiants = etudiantRepository.findByEmail(name);
@@ -48,13 +52,17 @@ public class HomeController {
         
         if(etudiants.size()>0){
             if(etudiants.get(0).getPassWord().equals(password)){
-                mav = new ModelAndView("redirect:/etudiant");
+                mav = new ModelAndView("redirect:/etudiant/");
+                request.getSession().setAttribute("userName",etudiants.get(0).getNom());
+                request.getSession().setAttribute("userId",etudiants.get(0).getID());
                 return mav;
             }
         }
         if(professeurs.size()>0){
             if(professeurs.get(0).getPassWord().equals(password)){
-                mav = new ModelAndView("redirect:/professeur");
+                mav = new ModelAndView("redirect:/professeur/");
+                request.getSession().setAttribute("userName",professeurs.get(0).getNom());
+                request.getSession().setAttribute("userId",professeurs.get(0).getID());
                 return mav;
             }
         }

@@ -1,9 +1,13 @@
 package com.fboot.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Professeur {
@@ -13,6 +17,7 @@ public class Professeur {
     private String prenom;
     private String email;
     private String passWord;
+    private List<Qcm> qcms;
 
     public Professeur() {
 
@@ -69,5 +74,14 @@ public class Professeur {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
+
+    @OneToMany(mappedBy = "professeur", cascade = CascadeType.ALL)
+	public List<Qcm> getQcms() {
+		return qcms;
+	}
+
+	public void setQcms(List<Qcm> qcms) {
+		this.qcms = qcms;
+	}
 
 }

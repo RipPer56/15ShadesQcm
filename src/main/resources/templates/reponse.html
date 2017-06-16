@@ -45,7 +45,7 @@
         <div class="w3-top">
           <div class="w3-bar w3-white w3-card-2" id="myNavbar" >
             <a href="#home" class="w3-bar-item w3-button w3-wide" style="padding: 3px 7px 11px 7px;">
-                <img src="/img/logo2.2.png"/>
+                <img style="height:50px;width:170px;" src="/img/logo.png"/>
             </a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small" >
@@ -58,7 +58,7 @@
                   
                   <a onclick='myFunction("Demo1")' href="#" style="margin-right:30px;text-decoration: none;">
                     <img src="/img/user.png" class="img-circle" style="margin-top:-10px;" alt="User" width="35" height="35"/>
-                    <span style="font-size:18px;color:rgb(164,0,102);margin-top:15px;">Zakariae</span>
+                    <span style="font-size:18px;color:rgb(164,0,102);margin-top:15px;" th:text="${session.userName}"></span>
                   </a>
                   <div id="Demo1" class="w3-dropdown-content w3-bar-block w3-animate-zoom" style="height:120px;margin-left:-40px;">
                          <div class="w3-container " style="border:1px solid rgb(194,194,194);height:120px;padding-left:0px;">
@@ -101,24 +101,29 @@
             <div class="row" style="background:rgb(54,54,54);min-height:100vh;">
                 <div class="col-sm-2" style="background-color:rgb(54,54,54);margin-top:58px;padding-right:0px;">
                     
-                   <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/diagnostique}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                  <div class="w3-dropdown-click w3-block">
+                      <a th:href="@{/etudiant/qcm/diagnostique}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Diagnostique  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/normatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/normatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Normatif  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/formatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/formatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Formatif  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/certificatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/certificatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Certificatif  <span class="label label-success" /></button></a>
+                     
+                    </div>
+                    <div class="w3-dropdown-click w3-block">
+                      <a th:href="@{/etudiant/resultat}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      Mes resultats  <span class="label label-success" /></button></a>
                      
                     </div>
                 </div>

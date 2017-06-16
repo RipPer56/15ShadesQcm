@@ -129,22 +129,27 @@
                 </div>
                 <div class="col-sm-10" style="background-color:rgb(228,228,228);margin-top:58px;padding-bottom: 45px;min-height:100vh;">
                     <br/>
-                    <div style="font-weight:bold;">Liste des Qcm du type " <span th:text="${type}" style="color:red;"></span> "</div>
-                    <br/>
                     			<table class="table">
                     			<thead>
 							      <tr>
-							        <th>Liste des qcms : </th>
-							        <th>Niveau :</th>
-							        <th></th>
+							        <th>Qcm passé</th>
+							        <th>type</th>
+							        <th>Score final</th>
+							         <th>Statut</th>
 							      </tr>
 							    </thead>
 							    <tbody>
-                                  <tr th:each="qcm : ${qcms}">
-                                  	<td  th:text="${qcm.getTitre()}"></td>
-                                  	<td  th:text="${qcm.getNiveau()}"></td>
-                                  	<td><a th:href="@{/etudiant/qcm/{idQcm}/{n}(idQcm=${qcm.getID()},n=0)}" role="button" class="btn btn-success">Passer<span style="color:rgb(153,0,51)" class="glyphicon glyphicon-pencil"/></a></td>
-
+                                  <tr th:each="resultat : ${resultats}">
+                                  	<td  th:text="${resultat.qcm.getTitre()}"></td>
+									<td  th:text="${resultat.qcm.getType()}"></td>
+									<td  th:text="${resultat.getNote()}"></td>
+									<div th:if="${resultat.getNote()>=resultat.qcm.getSeuil()}">
+										<td style="color:green"><span class="glyphicon glyphicon-ok"/>  bien passé</td>
+									</div>
+									<div th:if="${resultat.getNote()&lt; resultat.qcm.getSeuil()}">
+										<td style="color:red"><span class="glyphicon glyphicon-remove"/>  à refaire</td>
+									</div>
+									
                                   </tr>
                                  </tbody>
                                </table> 

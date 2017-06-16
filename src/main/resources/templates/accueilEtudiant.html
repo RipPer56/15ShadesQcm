@@ -45,7 +45,7 @@
         <div class="w3-top">
           <div class="w3-bar w3-white w3-card-2" id="myNavbar" >
             <a href="#home" class="w3-bar-item w3-button w3-wide" style="padding: 3px 7px 11px 7px;">
-                <img src="/img/logo2.2.png"/>
+                <img style="height:50px;width:170px;" src="/img/logo.png"/>
             </a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small" >
@@ -64,7 +64,7 @@
                          <div class="w3-container " style="border:1px solid rgb(194,194,194);height:120px;padding-left:0px;">
                                 
                                 <img src="/img/user.png" class="img-rounded" style="margin-top:7px;margin-left:10px;" alt="User" width="60" height="60"/>
-                                <span style="font-size:17px;color:rgb(164,0,102);margin-top:5px;margin-left:0px">Hicham Benmehdi</span>
+                                <span style="font-size:17px;color:rgb(164,0,102);margin-top:5px;margin-left:0px" th:text="${session.userName}"></span>
                                 <br/>
                                 <h5 style="font-size:14px;margin-top:-22px;margin-left:75px">hicham.benmehdi@gmail.com</h5>
                                 <hr style="margin-bottom:0px;"/>
@@ -104,30 +104,35 @@
                    
                     
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/diagnostique}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/diagnostique}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Diagnostique  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/normatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/normatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Normatif  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/formatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/formatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Formatif  <span class="label label-success" /></button></a>
                      
                     </div>
                     <div class="w3-dropdown-click w3-block">
-                      <a th:href="@{/etudiant/qcm/certificatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-inbox" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      <a th:href="@{/etudiant/qcm/certificatif}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
                       Certificatif  <span class="label label-success" /></button></a>
+                     
+                    </div>
+                    <div class="w3-dropdown-click w3-block">
+                      <a th:href="@{/etudiant/resultat}"><button   class="w3-button w3-block sidebar-font"><span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="margin-left:-20px;"></span> 
+                      Mes resultats  <span class="label label-success" /></button></a>
                      
                     </div>
                 </div>
                 <div class="col-sm-10" style="background-color:rgb(228,228,228);margin-top:58px;padding-bottom: 45px;min-height:100vh;">
                     
                     <br/>
-                    <h1 style="colo:red;font-weight:bold;">Bonjour Etudiant !!</h1>
+                    <h2 style="color:blue;font-weight:bold;">Bonjour <span th:text="${session.userName}"></span> :)</h2>
                     
                     
                 </div>

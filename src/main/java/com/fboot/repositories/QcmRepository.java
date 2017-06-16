@@ -14,5 +14,5 @@ import com.fboot.entities.Qcm;
 @Repository
 public interface QcmRepository extends JpaRepository<Qcm,Integer>{
 	List<Qcm> findByType(String type);
-	
+	List<Qcm> findByProfesseurID(int id);
 }
