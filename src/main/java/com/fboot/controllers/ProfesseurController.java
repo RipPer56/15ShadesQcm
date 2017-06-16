@@ -12,27 +12,27 @@ import com.fboot.repositories.QcmRepository;
 @Controller
 @RequestMapping("/professeur")
 public class ProfesseurController {
-	
-	@Autowired
-	private QcmRepository qcmRepo;
-	
-	@RequestMapping("/")
+
+    @Autowired
+    private QcmRepository qcmRepo;
+
+    @RequestMapping("")
     public ModelAndView welcome() {
         ModelAndView mav = new ModelAndView("accueilProf");
         return mav;
     }
-	
-	@RequestMapping("/addQcm")
+
+    @RequestMapping("/addQcm")
     public ModelAndView addQcm() {
         ModelAndView mav = new ModelAndView("addQcm");
-        mav.addObject("qcm",new Qcm());
+        mav.addObject("qcm", new Qcm());
         return mav;
     }
-	
-	@RequestMapping(value = "/addQcm", method = RequestMethod.POST)
-	 public String saveQcm(Qcm qcm) {
-		qcmRepo.save(qcm);
-		return "redirect:";
-	}
+
+    @RequestMapping(value = "/addQcm", method = RequestMethod.POST)
+    public String saveQcm(Qcm qcm) {
+        qcmRepo.save(qcm);
+        return "redirect:";
+    }
 
 }
