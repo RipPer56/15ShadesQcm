@@ -6,6 +6,7 @@ import com.fboot.repositories.EtudiantRepository;
 import com.fboot.repositories.ProfesseurRepository;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,13 +23,17 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class HomeController {
 
-    private final EtudiantRepository etudiantRepository;
-    private final ProfesseurRepository professeurRepository;
+    //private final EtudiantRepository etudiantRepository;
+    //private final ProfesseurRepository professeurRepository;
+    private List<String> logins;
+    private List<String> passwords;
 
     @Autowired
-    public HomeController(EtudiantRepository etudiantRepository, ProfesseurRepository professeurRepository) {
-        this.etudiantRepository = etudiantRepository;
-        this.professeurRepository = professeurRepository;
+    public HomeController(/*EtudiantRepository etudiantRepository, ProfesseurRepository professeurRepository*/) {
+        //this.etudiantRepository = etudiantRepository;
+        //this.professeurRepository = professeurRepository;
+        logins = Arrays.asList("test1","test2");
+        passwords = Arrays.asList("pass1","pass2");
     }
 
     @RequestMapping()
@@ -42,15 +47,44 @@ public class HomeController {
         ModelAndView mav = new ModelAndView("welcome");
         return mav;
     }
+    
+    private String getLogin(int index){
+        return logins.get(index);
+    }
+    
+    private String getPassword(int index){
+        return passwords.get(index);
+    }
+    
+    private boolean isCorrectLogin(String login){
+        for(String l : logins){
+            if(l.equals(login))
+                return true;
+        }
+        return false;
+    }
+    
+    public boolean isCorrectLoginPassword(String login, String password){
+        if(isCorrectLogin(login))
+            return logins.indexOf(login) == passwords.indexOf(password);
+        return false;
+    }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public ModelAndView login(HttpServletRequest request,@RequestParam(value = "name") String name, @RequestParam(value = "password") String password) {
-        ModelAndView mav = new ModelAndView("welcome");
+        //ModelAndView mav = new ModelAndView("welcome");
 
-        List<Etudiant> etudiants = etudiantRepository.findByEmail(name);
-        List<Professeur> professeurs = professeurRepository.findByEmail(name);
+        //List<Etudiant> etudiants = etudiantRepository.findByEmail(name);
+        //List<Professeur> professeurs = professeurRepository.findByEmail(name);
         
-        if(etudiants.size()>0){
+        if(isCorrectLoginPassword(name, password)){
+            System.out.println("Correct Credentials");
+            return new ModelAndView("redirect:/etudiant/");
+        }
+        System.out.println("Wrong Credentials");
+        return new ModelAndView("redirect:/");
+        
+        /*if(etudiants.size()>0){
             if(etudiants.get(0).getPassWord().equals(password)){
                 mav = new ModelAndView("redirect:/etudiant/");
                 request.getSession().setAttribute("userName",etudiants.get(0).getNom());
@@ -65,10 +99,8 @@ public class HomeController {
                 request.getSession().setAttribute("userId",professeurs.get(0).getID());
                 return mav;
             }
-        }
+        }*/
         
-        mav = new ModelAndView("redirect:/");
-        return mav;
     }
 
 }
