@@ -133,7 +133,7 @@
                     	<div style="font-weight:bold;"><span th:text="${question.getEnonce()}"></span></div><br/>
                     	<form method="post" th:href="@{/etudiant/qcm/reponse/{idQcm}/{n}(idQcm=${question.qcm.getID()},n=${question.getID()})}" >
                     		<div  th:each="choi : ${question.getChoix()}">
-                    			<input type="radio" name="choix" th:value="${choi.getValeur()}" th:id="${choi.getValeur()}" /> <label for="moins15"><span th:text="${choi.getValeur()}"></span></label><br />
+                    			<input type="radio" th:name="${choi.getValeur()}" th:value="${choi.getValeur()}" th:id="${choi.getValeur()}" /> <label for="moins15"><span th:text="${choi.getValeur()}"></span></label><br />
                     		</div>
                     		<br/>
                     		<button type="submit" class="w3-button w3-green">Réponse</button>

@@ -83,7 +83,15 @@ public class HomeController {
 
 		if (isCorrectLoginPassword(name, password)) {
 			System.out.println("Correct Credentials");
-			return new ModelAndView("redirect:/etudiant/");
+			if(name.equals("bennouna")) {
+				request.getSession().setAttribute("userName","bennouna");
+				request.getSession().setAttribute("userId","1");
+				return new ModelAndView("redirect:/professeur/");				
+			}else {
+				request.getSession().setAttribute("userName","balbal");
+				request.getSession().setAttribute("userId","2");
+				return new ModelAndView("redirect:/etudiant/");								
+			}
 		}
 		System.out.println("Wrong Credentials");
 		return new ModelAndView("redirect:/");

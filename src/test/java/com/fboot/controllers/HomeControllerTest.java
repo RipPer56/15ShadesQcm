@@ -46,7 +46,7 @@ public class HomeControllerTest {
     @Test
     public void testIsCorrectLoginPassword() {
         System.out.println("isCorrectLoginPassword");
-        String login = "test12";
+        String login = "ayoub";
         String password = "1234";
         boolean expResult = false;
         boolean result = homeController.isCorrectLoginPassword(login, password);

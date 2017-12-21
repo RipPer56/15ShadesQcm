@@ -52,7 +52,7 @@ public class ProfesseurController {
 	
 	@RequestMapping(value = "/addQcm", method = RequestMethod.POST)
 	 public String saveQcm(HttpServletRequest request,Qcm qcm) {
-		qcm.setProfesseur(profRepo.findOne((int)request.getSession().getAttribute("userId")));
+		qcm.setProfesseur(profRepo.findOne(1));
 		qcmRepo.save(qcm);
 		return "redirect:";
 	}
@@ -60,7 +60,7 @@ public class ProfesseurController {
 	@RequestMapping("/ajouterQuestions")
 	 public ModelAndView ajouterQuestion(HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView("listeQcm");
-		List<Qcm> listes = qcmRepo.findByProfesseurID((int)request.getSession().getAttribute("userId"));
+		List<Qcm> listes = qcmRepo.findByProfesseurID(1);
 		mav.addObject("listes", listes);
 		return mav;
 	}
