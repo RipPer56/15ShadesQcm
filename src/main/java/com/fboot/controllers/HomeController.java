@@ -23,84 +23,92 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class HomeController {
 
-    //private final EtudiantRepository etudiantRepository;
-    //private final ProfesseurRepository professeurRepository;
-    private List<String> logins;
-    private List<String> passwords;
+	// private final EtudiantRepository etudiantRepository;
+	// private final ProfesseurRepository professeurRepository;
+	private List<String> logins;
+	private List<String> passwords;
 
-    @Autowired
-    public HomeController(/*EtudiantRepository etudiantRepository, ProfesseurRepository professeurRepository*/) {
-        //this.etudiantRepository = etudiantRepository;
-        //this.professeurRepository = professeurRepository;
-        logins = Arrays.asList("test1","test2");
-        passwords = Arrays.asList("pass1","pass2");
-    }
+	@Autowired
+	public HomeController(/*
+							 * EtudiantRepository etudiantRepository, ProfesseurRepository
+							 * professeurRepository
+							 */) {
+		// this.etudiantRepository = etudiantRepository;
+		// this.professeurRepository = professeurRepository;
+		logins = Arrays.asList("bennouna", "balbal");
+		passwords = Arrays.asList("1234", "1235");
+	}
 
-    @RequestMapping()
-    public ModelAndView welcome() {
-        ModelAndView mav = new ModelAndView("welcome");
-        return mav;
-    }
+	@RequestMapping()
+	public ModelAndView welcome() {
+		ModelAndView mav = new ModelAndView("welcome");
+		return mav;
+	}
 
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-    public ModelAndView login() {
-        ModelAndView mav = new ModelAndView("welcome");
-        return mav;
-    }
-    
-    private String getLogin(int index){
-        return logins.get(index);
-    }
-    
-    private String getPassword(int index){
-        return passwords.get(index);
-    }
-    
-    private boolean isCorrectLogin(String login){
-        for(String l : logins){
-            if(l.equals(login))
-                return true;
-        }
-        return false;
-    }
-    
-    public boolean isCorrectLoginPassword(String login, String password){
-        if(isCorrectLogin(login))
-            return logins.indexOf(login) == passwords.indexOf(password);
-        return false;
-    }
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView("welcome");
+		return mav;
+	}
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
-    public ModelAndView login(HttpServletRequest request,@RequestParam(value = "name") String name, @RequestParam(value = "password") String password) {
-        //ModelAndView mav = new ModelAndView("welcome");
+	private String getPassword(int index) {
+		return passwords.get(index);
+	}
 
-        //List<Etudiant> etudiants = etudiantRepository.findByEmail(name);
-        //List<Professeur> professeurs = professeurRepository.findByEmail(name);
-        
-        if(isCorrectLoginPassword(name, password)){
-            System.out.println("Correct Credentials");
-            return new ModelAndView("redirect:/etudiant/");
-        }
-        System.out.println("Wrong Credentials");
-        return new ModelAndView("redirect:/");
-        
-        /*if(etudiants.size()>0){
-            if(etudiants.get(0).getPassWord().equals(password)){
-                mav = new ModelAndView("redirect:/etudiant/");
-                request.getSession().setAttribute("userName",etudiants.get(0).getNom());
-                request.getSession().setAttribute("userId",etudiants.get(0).getID());
-                return mav;
-            }
-        }
-        if(professeurs.size()>0){
-            if(professeurs.get(0).getPassWord().equals(password)){
-                mav = new ModelAndView("redirect:/professeur/");
-                request.getSession().setAttribute("userName",professeurs.get(0).getNom());
-                request.getSession().setAttribute("userId",professeurs.get(0).getID());
-                return mav;
-            }
-        }*/
-        
-    }
+	private String getLogin(int index) {
+		return logins.get(index);
+	}
+
+	private boolean isCorrectLogin(String login) {
+		for (String l : logins) {
+			if (l.equals(login))
+				return true;
+		}
+		return false;
+	}
+
+	public boolean isCorrectLoginPassword(String login, String password) {
+		if (isCorrectLogin(login))
+			return logins.indexOf(login) == passwords.indexOf(password);
+		return false;
+	}
+
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public ModelAndView login(HttpServletRequest request, @RequestParam(value = "name") String name,
+			@RequestParam(value = "password") String password) {
+		// ModelAndView mav = new ModelAndView("welcome");
+
+		// List<Etudiant> etudiants = etudiantRepository.findByEmail(name);
+		// List<Professeur> professeurs = professeurRepository.findByEmail(name);
+
+		if (isCorrectLoginPassword(name, password)) {
+			System.out.println("Correct Credentials");
+			if(name.equals("bennouna")) {
+				request.getSession().setAttribute("userName","bennouna");
+				request.getSession().setAttribute("userId","1");
+				return new ModelAndView("redirect:/professeur/");				
+			}else {
+				request.getSession().setAttribute("userName","balbal");
+				request.getSession().setAttribute("userId","2");
+				return new ModelAndView("redirect:/etudiant/");								
+			}
+		}
+		System.out.println("Wrong Credentials");
+		return new ModelAndView("redirect:/");
+
+		/*
+		 * if(etudiants.size()>0){ if(etudiants.get(0).getPassWord().equals(password)){
+		 * mav = new ModelAndView("redirect:/etudiant/");
+		 * request.getSession().setAttribute("userName",etudiants.get(0).getNom());
+		 * request.getSession().setAttribute("userId",etudiants.get(0).getID()); return
+		 * mav; } } if(professeurs.size()>0){
+		 * if(professeurs.get(0).getPassWord().equals(password)){ mav = new
+		 * ModelAndView("redirect:/professeur/");
+		 * request.getSession().setAttribute("userName",professeurs.get(0).getNom());
+		 * request.getSession().setAttribute("userId",professeurs.get(0).getID());
+		 * return mav; } }
+		 */
+
+	}
 
 }

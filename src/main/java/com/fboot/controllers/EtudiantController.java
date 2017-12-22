@@ -73,8 +73,9 @@ public class EtudiantController {
 		}
 		else{
 			Resultat resultat = new Resultat();
-			resultat.setEtudiant(etudiantRepo.findOne((int)request.getSession().getAttribute("userId")));
+			resultat.setEtudiant(etudiantRepo.findOne(2));
 			resultat.setQcm(qcmRepo.findOne(idQcm));
+			if(request.getSession().getAttribute("score")==null) request.getSession().setAttribute("score","12");
 			resultat.setNote((int) request.getSession().getAttribute("score"));
 			resultatRepo.save(resultat);
 			 mav = new ModelAndView("finQcm");

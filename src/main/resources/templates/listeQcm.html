@@ -126,7 +126,7 @@
 							    <tbody>
                                   <tr th:each="qcm : ${listes}">
                                   	<td  th:text="${qcm.getTitre()}"></td>
-                                  	<td><a th:href="@{/professeur/qcm/{idQcm}/(idQcm=${qcm.getID()})}" role="button" class="btn btn-success">Choisir<span style="color:rgb(153,0,51)" class="glyphicon glyphicon-pencil"/></a></td>
+                                  	<td><a th:href="@{/professeur/qcm/{idQcm}/(idQcm=${qcm.getID()})}" th:name="${qcm.getID()}" role="button" class="btn btn-success">Choisir<span style="color:rgb(153,0,51)" class="glyphicon glyphicon-pencil"/></a></td>
 
                                   </tr>
                                  </tbody>

@@ -46,8 +46,8 @@ public class HomeControllerTest {
     @Test
     public void testIsCorrectLoginPassword() {
         System.out.println("isCorrectLoginPassword");
-        String login = "test12";
-        String password = "pass1";
+        String login = "ayoub";
+        String password = "1234";
         boolean expResult = false;
         boolean result = homeController.isCorrectLoginPassword(login, password);
         assertEquals(expResult, result);
@@ -56,8 +56,8 @@ public class HomeControllerTest {
     @Test
     public void testIsNotCorrectLoginPassword() {
         System.out.println("isCorrectLoginPassword");
-        String login = "test1";
-        String password = "pass2";
+        String login = "balbal";
+        String password = "126";
         boolean expResult = false;
         boolean result = homeController.isCorrectLoginPassword(login, password);
         assertEquals(expResult, result);
