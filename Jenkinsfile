@@ -8,13 +8,22 @@ pipeline {
         
         stage ('Build') {
             steps {
-            bat 'mvn install'
+				bat 'mvn install'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml' 
+                    junit 'target/surefire-reports/*.xml' 
                 }
             }
         }
+		stage('lkher'){
+			steps{
+				bat 'mvn test'
+				bat 'mvn site'
+			}
+			post{
+				
+			}
+		}
     }
 }
