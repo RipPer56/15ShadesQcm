@@ -16,13 +16,12 @@ pipeline {
                 }
             }
         }
-		stage('lkher'){
+		stage('cobrtr'){
 			steps{
-				bat 'mvn test'
-				bat 'mvn site'
+				bat 'mvn cobertura:cobertura'
 			}
 			post{
-				
+				cobertura 'target/cobertura/*.ser'
 			}
 		}
     }
