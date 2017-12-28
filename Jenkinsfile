@@ -21,7 +21,9 @@ pipeline {
 				bat 'mvn cobertura:cobertura'
 			}
 			post{
-				cobertura 'target/cobertura/*.ser'
+				success {
+					cobertura 'target/cobertura/*.ser'
+				}
 			}
 		}
     }
