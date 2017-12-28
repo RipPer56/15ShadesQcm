@@ -22,7 +22,7 @@ pipeline {
 			}
 			post{
 				success {
-					cobertura 'target/cobertura/*.ser'
+					coberturaReportFile  'target/cobertura/*.ser'
 				}
 			}
 		}
