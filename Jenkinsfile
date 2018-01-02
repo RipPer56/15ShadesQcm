@@ -18,11 +18,11 @@ pipeline {
         }
 		stage('cobrtr'){
 			steps{
-				bat 'mvn cobertura:cobertura'
+				bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
 			}
 			post{
 				success {
-					step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'target/site/cobertura/*.html', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+					step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'target/site/cobertura/*.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
 				}
 			}
 		}
