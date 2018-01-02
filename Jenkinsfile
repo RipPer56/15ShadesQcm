@@ -8,7 +8,7 @@ pipeline {
 		
 	    stage('lekher'){
 		    steps{
-			    step([$class: 'NexusArtifactUploader', artifactId: 'my-model',
+			    nexusArtifactUploader (artifactId: 'my-model',
 					classifier: '',
 					credentialsId: '<id>',
 					file: 'target/15ShadesQcm-0.0.1-SNAPSHOT.jar',
@@ -18,7 +18,7 @@ pipeline {
 					protocol: 'http',
 					repository: 'Releases',
 					type: 'jar',
-					version: '0.0.1-SNAPSHOT'])
+					version: '0.0.1-SNAPSHOT')
 		    }
 	    }
      }
