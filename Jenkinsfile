@@ -5,13 +5,28 @@ pipeline {
         jdk 'jdk1.8.0_101'
     }
     stages {
+			stage ('Build') {
+				steps {
+					bat 'mvn install'
+				}
+				post {
+					success {
+						junit 'target/surefire-reports/*.xml' 
+					}
+				}
+      }
 	    stage('lekher'){
-		    step([$class: 'nexusArtifactUploader', nexusVersion: 'nexus2', nexusUrl: 'localhost:8081/nexus',groupId : 'com.fboot', version:'0.0.1-SNAPSHOT', repository:'Releases', artifacts: 
-				[artifactId: 15ShadesQcm,
-				 classifier: '',
-				 file: '15ShadesQcm-0.0.1-SNAPSHOT.jar',
-				 type: 'jar']
-			  )
+		    nexusArtifactUploader artifactId: 'my-model',
+        classifier: '',
+        credentialsId: '<id>',
+        file: 'target/15ShadesQcm-0.0.1-SNAPSHOT.jar',
+        groupId: 'com.fboot',
+        nexusUrl: '<nexus-url>',
+        nexusVersion: 'nexus3',
+        protocol: 'http',
+        repository: 'Releases',
+        type: 'jar',
+        version: '0.0.1-SNAPSHOT'
 	    }
      }
 }
