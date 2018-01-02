@@ -11,7 +11,7 @@ pipeline {
 				 classifier: '',
 				 file: '15ShadesQcm-0.0.1-SNAPSHOT.jar',
 				 type: 'jar']
-			 ] ])
+			  ])
 	    }
      }
 }
