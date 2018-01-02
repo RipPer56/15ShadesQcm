@@ -16,8 +16,6 @@ pipeline {
 			}
 		}
 		
-		step([$class: 'JavadocArchiver', javadocDir: 'target/site/apidocs', keepAll: false])
-		
 	    stage('lekher'){
 		    steps{
 			    step([$class: 'nexusArtifactUploader', artifactId: 'my-model',
