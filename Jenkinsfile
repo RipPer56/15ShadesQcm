@@ -8,7 +8,7 @@ pipeline {
 		
 	    stage('lekher'){
 		    steps{
-			    nexusArtifactUploader (artifactId: 'my-model',
+			    nexusPublisher (artifactId: 'my-model',
 					classifier: '',
 					credentialsId: '<id>',
 					file: 'target/15ShadesQcm-0.0.1-SNAPSHOT.jar',
