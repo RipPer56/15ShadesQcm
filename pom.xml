@@ -95,13 +95,20 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
-				<configuration>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-				</configuration>
+		<configuration>
+			<formats>
+				<format>html</format>
+				<format>xml</format>
+			</formats>
+		</configuration>
             </plugin>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-javadoc-plugin</artifactId>
+		<version>3.0.0</version>
+		<configuration>
+		</configuration>
+	    </plugin>
         </plugins>
     </build>
     <reporting>
@@ -118,6 +125,13 @@
                 </formats>
               </configuration>
           </plugin>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-javadoc-plugin</artifactId>
+		<version>3.0.0</version>
+		<configuration>
+		</configuration>
+	  </plugin>
         </plugins>
     </reporting>
 </project>
