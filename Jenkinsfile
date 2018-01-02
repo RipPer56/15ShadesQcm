@@ -8,7 +8,7 @@ pipeline {
 	    stage('lekher'){
 		    steps{
 			    nexusPublisher nexusInstanceId: 'nexus',
-				    nexusRepositoryId: 'Releases',
+				    nexusRepositoryId: 'releases',
 				    packages: [[$class: 'MavenPackage',
 						mavenAssetList: [[classifier: '',
 								  extension: 'jar',
