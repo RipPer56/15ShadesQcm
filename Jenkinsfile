@@ -9,11 +9,10 @@ pipeline {
 		    steps {
 		      nexusArtifactUploader (
 			nexusVersion('nexus2')
-			protocol('http')
 			nexusUrl('localhost:8081/nexus')
 			groupId('com.fboot')
 			version('0.0.1-SNAPSHOT')
-			repository('\target')
+			repository('Releases')
 			artifacts: [
 				[artifactId: 15ShadesQcm,
 				 classifier: '',
