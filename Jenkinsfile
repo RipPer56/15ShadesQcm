@@ -26,13 +26,23 @@ pipeline {
 			}
 		}
 	}
-	stage('cobrtr'){
+	stage('jvdoc'){
 		steps{
 			bat 'mvn javadoc:javadoc'
 		}
 		post{
 			success {
 				step([$class: 'JavadocArchiver', javadocDir: 'target/site/apidocs', keepAll: false])
+			}
+		}
+	}
+	stage('lkher'){
+		steps{
+			bat 'mvn package'
+		}
+		post{
+			success {
+				
 			}
 		}
 	}
