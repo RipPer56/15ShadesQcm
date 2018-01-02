@@ -6,12 +6,12 @@ pipeline {
     }
     stages {
 	    stage('lekher'){
-		    step([$class: 'nexusArtifactUploader', nexusVersion: 'nexus2', nexusUrl: 'localhost:8081/nexus',groupId : 'com.fboot', version:'0.0.1-SNAPSHOT', repository:'Releases', artifacts: [
+		    step([$class: 'nexusArtifactUploader', nexusVersion: 'nexus2', nexusUrl: 'localhost:8081/nexus',groupId : 'com.fboot', version:'0.0.1-SNAPSHOT', repository:'Releases', artifacts: 
 				[artifactId: 15ShadesQcm,
 				 classifier: '',
 				 file: '15ShadesQcm-0.0.1-SNAPSHOT.jar',
 				 type: 'jar']
-			  ])
+			  )
 	    }
      }
 }
