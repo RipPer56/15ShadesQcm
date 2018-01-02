@@ -16,7 +16,7 @@ pipeline {
 						mavenCoordinate: [artifactId: '15ShadesQcm',
 								  groupId: 'com.fboot',
 								  packaging: 'jar',
-								  version: '0.0.1-SNAPSHOT']
+								  version: '2.2']
 					       ]]
 		    }
 	    }
