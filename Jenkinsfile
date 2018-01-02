@@ -40,9 +40,7 @@ pipeline {
 		steps{
 			bat 'mvn package'
 		}
-		post{
-			
-		}
+		
 	}
     }
 }
