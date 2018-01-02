@@ -13,7 +13,7 @@ pipeline {
 						mavenAssetList: [[classifier: '',
 								  extension: 'jar',
 								  filePath: 'target/15ShadesQcm-0.0.1-SNAPSHOT.jar']],
-						mavenCoordinate: [artifactId: 'my-model',
+						mavenCoordinate: [artifactId: '15ShadesQcm',
 								  groupId: 'com.fboot',
 								  packaging: 'jar',
 								  version: '0.0.1-SNAPSHOT']
