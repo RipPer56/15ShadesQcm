@@ -1,0 +1,173 @@
+Environment variables:
+  - =C:=C:\titanic\gl\sonar-runner-2.4\bin
+  - =ExitCode=00000000
+  - ALLUSERSPROFILE=C:\ProgramData
+  - ANSICON=168x1000 (168x44)
+  - ANSICON_DEF=7
+  - APPDATA=C:\Users\RipPer\AppData\Roaming
+  - APR_ICONV1_PATH=C:\csvn\bin\iconv\
+  - CMDER_ROOT=C:\Users\RipPer\Desktop\_\fun\cmder_mini
+  - COMPUTERNAME=RIPPER-PC
+  - ComSpec=C:\Windows\system32\cmd.exe
+  - CommonProgramFiles=C:\Program Files\Common Files
+  - CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+  - CommonProgramW6432=C:\Program Files\Common Files
+  - ConEmuANSI=ON
+  - ConEmuAnsiLog=
+  - ConEmuArgs=/Icon "C:\Users\RipPer\Desktop\_\fun\cmder_mini\icons\cmder.ico" /Title Cmder
+  - ConEmuArgs2=
+  - ConEmuBackHWND=0x000C015C
+  - ConEmuBaseDir=C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5\ConEmu
+  - ConEmuBuild=161206
+  - ConEmuConfig=
+  - ConEmuDir=C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5
+  - ConEmuDrawHWND=0x007C04B8
+  - ConEmuDrive=C:
+  - ConEmuHWND=0x00920262
+  - ConEmuHooks=Enabled
+  - ConEmuIsAdmin=ADMIN
+  - ConEmuPID=236
+  - ConEmuPalette=Monokai
+  - ConEmuServerPID=6740
+  - ConEmuTask={cmd::Cmder}
+  - ConEmuWorkDir=C:\Users\RipPer
+  - ConEmuWorkDrive=C:
+  - ERROR_CODE=0
+  - FP_NO_HOST_CHECK=NO
+  - GIT_INSTALL_ROOT=C:\Git
+  - HOME=C:\Users\RipPer
+  - HOMEDRIVE=C:
+  - HOMEPATH=\Users\RipPer
+  - JAVA_EXEC="C:\Program Files\Java\jdk1.8.0_101\bin\java.exe"
+  - JAVA_HOME=C:\Program Files\Java\jdk1.8.0_101
+  - LOCALAPPDATA=C:\Users\RipPer\AppData\Local
+  - LOGONSERVER=\\RIPPER-PC
+  - M2_HOME=C:\maven
+  - MAVEN_HOME=C:\maven
+  - MYSQLCONNECTOR_ASSEMBLIESPATH=C:\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5
+  - NUMBER_OF_PROCESSORS=4
+  - OS=Windows_NT
+  - PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+  - PLINK_PROTOCOL=ssh
+  - PROCESSOR_ARCHITECTURE=AMD64
+  - PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+  - PROCESSOR_LEVEL=6
+  - PROCESSOR_REVISION=2a07
+  - PROJECT_HOME=C:\titanic\gl\sonar-runner-2.4\bin
+  - PROMPT=CLINK $P$G
+  - PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+  - PUBLIC=C:\Users\Public
+  - PYTHONHOME=C:\Python 3.5
+  - Path=C:\Users\RipPer\Desktop\_\fun\cmder_mini\bin;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5\ConEmu;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\ImageMagick-7.0.7-Q16;C:\Python 3.5\Scripts\;C:\Python 3.5\;C:\Python27\Scripts\;C:\Python27\;D:\app\root\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\STMicroelectronics\st7toolset\asm;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Java\jre1.8.0_101\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\wamp\bin\php\php5.5.12;C:\ProgramData\ComposerSetup\bin;C:\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\nodejs\;C:\protobuf\bin;C:\maven\bin;C:\csvn\bin\;C:\titanic\anwar\TPOCL\use-3.0.0\use-3.0.0\bin;C:\Jenkins;C:\Users\RipPer\AppData\Roaming\Composer\vendor\bin;C:\Users\RipPer\AppData\Roaming\npm;C:\Git\usr\bin;C:\Git\usr\share\vim\vim74;C:\Users\RipPer\Desktop\_\fun\cmder_mini\
+  - ProgramData=C:\ProgramData
+  - ProgramFiles=C:\Program Files
+  - ProgramFiles(x86)=C:\Program Files (x86)
+  - ProgramW6432=C:\Program Files
+  - SONAR_RUNNER_HOME=C:\titanic\gl\sonar-runner-2.4\bin\..
+  - SVN_SSH=C:\\Git\\bin\\ssh.exe
+  - SystemDrive=C:
+  - SystemRoot=C:\Windows
+  - TEMP=C:\Users\RipPer\AppData\Local\Temp
+  - TERM=cygwin
+  - TMP=C:\Users\RipPer\AppData\Local\Temp
+  - USERDOMAIN=RipPer-PC
+  - USERNAME=RipPer
+  - USERPROFILE=C:\Users\RipPer
+  - VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+  - VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+  - VS140COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+  - __COMPAT_LAYER=RunAsAdmin
+  - aliases=C:\Users\RipPer\Desktop\_\fun\cmder_mini\config\user-aliases.cmd
+  - architecture=64
+  - user-aliases=C:\Users\RipPer\Desktop\_\fun\cmder_mini\config\user-aliases.cmd
+  - verbose-output=0 
+  - windir=C:\Windows
+  - windows_tracing_flags=3
+  - windows_tracing_logfile=C:\BVTBin\Tests\installpackage\csilogfile.log
+System properties:
+  - ROOT_LOGGER_LEVEL=DEBUG
+  - awt.toolkit=sun.awt.windows.WToolkit
+  - file.encoding=Cp1252
+  - file.encoding.pkg=sun.io
+  - file.separator=\
+  - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+  - java.awt.printerjob=sun.awt.windows.WPrinterJob
+  - java.class.path=C:\titanic\gl\sonar-runner-2.4\bin\..\lib\sonar-runner-dist-2.4.jar
+  - java.class.version=52.0
+  - java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed
+  - java.ext.dirs=C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+  - java.home=C:\Program Files\Java\jdk1.8.0_101\jre
+  - java.io.tmpdir=C:\Users\RipPer\AppData\Local\Temp\
+  - java.library.path=C:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\RipPer\Desktop\_\fun\cmder_mini\bin;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5;C:\Users\RipPer\Desktop\_\fun\cmder_mini\vendor\conemu-maximus5\ConEmu;C:\Program Files\MongoDB\Server\3.4\bin;C:\Program Files\ImageMagick-7.0.7-Q16;C:\Python 3.5\Scripts\;C:\Python 3.5\;C:\Python27\Scripts\;C:\Python27\;D:\app\root\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\STMicroelectronics\st7toolset\asm;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Java\jre1.8.0_101\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\wamp\bin\php\php5.5.12;C:\ProgramData\ComposerSetup\bin;C:\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\nodejs\;C:\protobuf\bin;C:\maven\bin;C:\csvn\bin\;C:\titanic\anwar\TPOCL\use-3.0.0\use-3.0.0\bin;C:\Jenkins;C:\Users\RipPer\AppData\Roaming\Composer\vendor\bin;C:\Users\RipPer\AppData\Roaming\npm;C:\Git\usr\bin;C:\Git\usr\share\vim\vim74;C:\Users\RipPer\Desktop\_\fun\cmder_mini\;.
+  - java.runtime.name=Java(TM) SE Runtime Environment
+  - java.runtime.version=1.8.0_101-b13
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=1.8
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=http://java.oracle.com/
+  - java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+  - java.version=1.8.0_101
+  - java.vm.info=mixed mode
+  - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=1.8
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=25.101-b13
+  - line.separator=
+
+  - os.arch=amd64
+  - os.name=Windows 7
+  - os.version=6.1
+  - path.separator=;
+  - project.home=C:\titanic\gl\sonar-runner-2.4\bin
+  - runner.home=C:\titanic\gl\sonar-runner-2.4\bin\..
+  - sun.arch.data.model=64
+  - sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes
+  - sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_101\jre\bin
+  - sun.cpu.endian=little
+  - sun.cpu.isalist=amd64
+  - sun.desktop=windows
+  - sun.io.unicode.encoding=UnicodeLittle
+  - sun.java.command=org.sonar.runner.Main -X
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=Cp1252
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - sun.os.patch.level=Service Pack 1
+  - sun.stderr.encoding=cp850
+  - sun.stdout.encoding=cp850
+  - user.country=US
+  - user.country.format=FR
+  - user.dir=C:\titanic\gl\sonar-runner-2.4\bin
+  - user.home=C:\Users\RipPer
+  - user.language=en
+  - user.language.format=fr
+  - user.name=RipPer
+  - user.script=
+  - user.timezone=Europe/Paris
+  - user.variant=
+SonarQube plugins:
+  - SonarC# 6.5.0.3766 (csharp)
+  - SonarPython 1.8.0.1496 (python)
+  - SonarJava 4.15.0.12310 (java)
+  - Flex 2.3 (flex)
+  - SonarQube :: Plugins :: SCM :: Git 1.3.0.869 (scmgit)
+  - SonarXML 1.4.3.1027 (xml)
+  - SonarPHP 2.11.0.2485 (php)
+  - SonarTS 1.1.0.1079 (typescript)
+  - SonarQube :: Plugins :: SCM :: SVN 1.6.0.860 (scmsvn)
+  - SonarJS 3.2.0.5506 (javascript)
+Global properties:
+  - sonar.core.id=AWC7H_dbevgNnN_VWGJr
+  - sonar.core.startTime=2018-01-05T20:36:00+0100
+Settings for module: shades2
+  - sonar.host.url=http://localhost:9000
+  - sonar.projectBaseDir=c:\Users\RipPer\Documents\NetBeansProjects\15ShadesQcm\src\main\java
+  - sonar.projectKey=shades2
+  - sonar.projectName=shades2
+  - sonar.projectVersion=1.02
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=c:/Users/RipPer/Documents/NetBeansProjects/15ShadesQcm/src/main/java
+  - sonar.verbose=true
+  - sonar.working.directory=c:\Users\RipPer\Documents\NetBeansProjects\15ShadesQcm\src\main\java\.sonar

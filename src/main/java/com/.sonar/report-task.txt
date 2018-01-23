@@ -1,0 +1,6 @@
+projectKey=shades2
+serverUrl=http://localhost:9000
+serverVersion=6.7.1.35068
+dashboardUrl=http://localhost:9000/dashboard/index/shades2
+ceTaskId=AWDIAo7XK-6pSPa5VpOn
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWDIAo7XK-6pSPa5VpOn
