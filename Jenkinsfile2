@@ -1,0 +1,33 @@
+node {
+    /* le noeud qui exécutera les stages */
+    def keita
+
+    stage('Clone rep') {
+        /* On clone d'abord le repository dans notre workspace */
+
+        checkout csm /* csm est un raccourci qui ceut dire la branche actuelle dans le workspace*/
+    }
+
+    stage('Build image') {
+        /* On fait un build actual de l'image;
+         * Ceci est equivalent à l'exection de 
+         * la commande du build de l'image dans
+         * le ligne de commande*/
+
+        keita = docker.build("RipPer56/15ShadesQcm")
+    }
+
+    stage('Test image') {
+        /* Ideallement, on peut tester en utiliser un framework de test convenable*/
+
+        keita.inside {
+            bat 'echo "Tests passed"'
+        }
+    }
+
+    stage('Push image') {        
+        docker.withRegistry('https://hub.docker.com/', 'RipPer56/dockHub@56') { /*my Docker hub credentials*/
+            stage.push("latest")
+        }
+    }
+}
